@@ -10,7 +10,6 @@ public class PersonController {
 
     @Post(value = "/create", consumes = MediaType.APPLICATION_JSON, produces = MediaType.APPLICATION_JSON)
     public HttpResponse<Person> createPerson(final Person person) {
-        person.setAge(22);
         System.out.println("Person created: " + person.toString());
         return HttpResponse.created(person);
     }
